@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block extra_head %}
+
+
+{% endblock %}
+
+{% block featureBox %}
+
+	{% load media %}
+	<p><img src="{% media_url %}/img/Rsrch_HomeBanner_2.jpg"></img></p>
+    
+       <h2>Countries and Subdivisions:</h2>
+        <form action="." method="POST">
+
+        {% if error %}
+          <p class="error">ERROR: {{error}}</p>
+        {% endif %}
+        
+        
+        {% if form.errors %}
+          <p class="error">Please correct the errors below.</p>
+        {% endif %}
+    
+        {{ form.as_p }}
+        <input type="submit" value="Search" />
+        </form>
+
+{% endblock %}

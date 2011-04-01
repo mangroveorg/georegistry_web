@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block extra_head %}
+
+
+{% endblock %}
+
+{% block featureBox %}
+
+<h1>Total: {{ total }}</h1>
+<ol>
+   {% for i in gr_id_list %}
+   <li> <a href="/web/gmap/renderpoint/{{i.gr_id}}">{{i.gr_name}}</a> </li>
+   {% endfor %}
+</ol>
+   
+{% endblock %}

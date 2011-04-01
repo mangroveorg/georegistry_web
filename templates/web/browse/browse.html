@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block extra_head %}
+
+
+{% endblock %}
+
+{% block featureBox %}
+
+	{% load media %}
+	<p><img src="{% media_url %}/img/Rsrch_HomeBanner_2.jpg"></img></p>
+    
+    {% if not user.is_authenticated %}
+            {% if form.errors %}
+                    <p class="error">Sorry, that's not a valid username or password</p>
+            {% endif %}
+
+            <form action='/login/' method='POST'>
+                    <label for="username">User name:</label>
+                    <input type="text" name="username" value="" id="username">
+                    <br>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" value="" id="password">
+                    <br>
+                    <input type="submit" value="login" />
+                    <input type="hidden" name="next" value="{{ next|escape }}" />
+            </form>
+            Dont' have an account yet?  <a href="/accounts/register">Register here</a>
+    {% endif %}
+                
+<h1>Browse Options:</h1>
+<ul>
+<li> <a href="/web/browse/by-country-and-subdivision">Browse the Georegistry by Country</a> </li>
+</ul>
+<p>Please pardon our mess.  This site is under construction!</p>
+
+{% endblock %}

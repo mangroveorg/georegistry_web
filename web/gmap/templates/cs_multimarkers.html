@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block featureBox %}
+<script type="text/javascript" charset="utf-8">
+	var mapData = {{map_data|safe}};
+</script>
+<div id="map"></div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" charset="utf-8">
+<!--
+	var MapMaker = (function($, undefined){
+		var map, grm, data;
+		function GeoRegMap(_googlemaps, mapSelector) {
+			this.features = [];
+			this.mapDiv = $(mapSelector);
+			this.mapDiv.css({'height': $(window).height()-100})
+		}
+		GeoRegMap.prototype.start = function(){
+			this.center = (function(fts){
+				var latTot = 0;
+				var lngTot = 0;
+				var ll = fts.length
+				$.each(fts, function(i, ft){
+					latTot += ft.coords.lat;
+					lngTot += ft.coords.lng;
+				});
+				return {
+					lat: latTot / ll,
+					lng: lngTot / ll
+				}
+			})(this.features);
+			
+			this.gmap = new google.maps.Map(this.mapDiv[0], {
+				          zoom: 10,
+				          center: new google.maps.LatLng(this.center.lat, this.center.lng),
+				          mapTypeId: google.maps.MapTypeId.ROADMAP
+				        });
+			
+			$.each(this.features, function(i, ft){
+				ft.createMarker();
+			});
+			
+			this.showPoints();
+		}
+		GeoRegMap.prototype.showPoints = function(){
+			var _gmap = this.gmap;
+			$.each(this.features, function(i, ft){
+				ft.marker.setMap(_gmap);
+			});
+		}
+		function gmapFeature(data){
+			this._data = data;
+			this.coords = {
+				lat: data.geometry.coordinates[0],
+				lng: data.geometry.coordinates[1]
+			}
+		}
+		gmapFeature.prototype.createMarker = function(gmap){
+			if(!this.gpoint) {
+				this.gpoint = true;
+				this.position = new google.maps.LatLng(this.coords.lat, this.coords.lng);
+				this.marker = new google.maps.Marker({'position':this.position});
+			}
+		}
+		function processGrData(data) {
+			if(data && data.features && data.features.length) {
+				grm = new GeoRegMap(google.maps, '#map');
+				$.each(data.features, function(i, featureData){
+					grm.features.push(new gmapFeature(fData))
+				});
+				grm.start();
+			}
+		}
+		function gmapLoaded(){
+			$.getJSON(mapData.data_url).done(processGrData)
+		}
+		return {
+			gmapLoaded: gmapLoaded,
+			gmap: function(){return grm.gmap},
+			loadPoints: function(){
+				grm.showPoints();
+			}
+		}
+	})(jQuery);
+	
+-->
+</script>
+<script src="http://maps.google.com/maps/api/js?sensor=false&callback=MapMaker.gmapLoaded" type="text/javascript" charset="utf-8"></script>
+{% endblock %}

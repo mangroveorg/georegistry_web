@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block extra_head %}
+
+
+{% endblock %}
+
+{% block featureBox %}
+
+    <h1>Welcome to the Georegistry Client Website!</h1>
+    <p>This site is a client reference implementation for the Georegistry Webservice.<p>
+    <p>Our intent is for this sire to serve as an example for those creating their own
+    applications that make use of the Georegistry Webservice.</p>
+    <p>You may also use this site to browse data in the Georegistry.</p>
+		{% load media %}
+                <img src="{% media_url %}/img/Rsrch_HomeBanner_2.jpg"></img>
+                
+<h1>Quick Links:</h1>
+<ul>
+
+<li><a href="/gmap/search/?school_type=primary&religious=no&country_code=NG&subdivision_code=JI">
+Search Example 1: All religious primary schools in Miga (Nigeria) in Google Maps</a></li>
+
+<li><a href="/list/search/?school_type=primary&religious=no&country_code=NG&subdivision_code=JI">
+Search Example 2: All religious primary schools in Miga (Nigeria) in as a list</a></li>
+
+
+</ul>
+<p>Please pardon our mess.  This site is under construction!</p>
+
+{% endblock %}
