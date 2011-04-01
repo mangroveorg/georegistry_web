@@ -18,7 +18,7 @@ def render_point(request, feature_id):
     """
         Plot a point
     """
-    URL="api/v1/feature/%s.json" % (feature_id)
+    URL="api/1.0/feature/%s.json" % (feature_id)
     r= query_georegistry(URL)
     d=json.loads(r)
     if d['status']==200:
@@ -50,7 +50,7 @@ def render_points(request, kwargs):
         Plot multiple points based on a kwarg dict
     """
     data = urllib.urlencode(kwargs) 
-    URL="api/v1/features/search?%s" % (data)
+    URL="api/1.0/features/search?%s" % (data)
     r= query_georegistry(URL)
     d=json.loads(r)
     if d['status']==200:
@@ -98,7 +98,7 @@ def render_points_client_side(request, kwargs):
         Do the same as render_points, but client side.
     """
     pass_to_browser = {
-        'data_url': "/api/v1/features/search?%s" % urllib.urlencode(kwargs),
+        'data_url': "/api/1.0/features/search?%s" % urllib.urlencode(kwargs),
         'query_attributes': kwargs
     }
     return render_to_response("cs_multimarkers.html", {'map_data': json.dumps(pass_to_browser), 'widepage': True})

@@ -19,7 +19,7 @@ def table_points(request, kwargs):
         Plot multiple points based on a kwarg dict
     """
     data = urllib.urlencode(kwargs) 
-    URL="api/v1/features/search?%s" % (data)
+    URL="api/1.0/features/search?%s" % (data)
     r= query_georegistry(URL)
     d=json.loads(r)
     if d['status']==200:
