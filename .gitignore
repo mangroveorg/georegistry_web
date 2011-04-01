@@ -1,0 +1,7 @@
+*.xls
+*.csv
+*.gadm
+*.gadl
+*.kpf
+*.pyc
+db
