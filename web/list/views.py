@@ -31,7 +31,7 @@ def list_points(request, kwargs):
             pointsitems=[]
             geomtype=i['geometry']['type']
             if geomtype=="Point": 
-                gr_id=i['properties']['id']
+                gr_id=i['id']
                 gr_name=i['properties']['name']
                 
                 gr_id_list.append({'gr_id': gr_id, 'gr_name': gr_name })
