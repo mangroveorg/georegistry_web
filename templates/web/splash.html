@@ -5,23 +5,8 @@
 {% endblock %}
 
 {% block featureBox %}
-    {% if not user.is_authenticated %}
-    
-            {% if form.errors %}
-                    <p class="error">Sorry, that's not a valid username or password</p>
-            {% endif %}
 
-            <form action='/login/' method='POST'>
-                    <label for="username">User:</label>
-                    <input type="text" name="username" value="" id="username">
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" value="" id="password">
-                    <input type="submit" value="API Login" />
-                    <input type="hidden" name="next" value="{{ next|escape }}" />
-            </form>
-     <br>       
-    {% endif %}
-    
+<br>
 {% load media %}
  <img src="{% media_url %}/img/georegistry_logo.png"></img>
 <br> <br> 
