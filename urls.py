@@ -14,7 +14,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
-
+    (r'about/', direct_to_template, {'template': 'web/about.html'}),
     (r'^', include('georegistry_web.web.urls')),
 
 
