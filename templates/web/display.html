@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop no-websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity no-cssanimations csscolumns cssgradients no-cssreflections csstransforms no-csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head>
+  <meta charset="utf-8">
+{% load media %}	
+	
+	
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="georegistry_web - The Gloabal Geospatial Health Index Server">
+  <title>Georegistry - The Geospatial Health Index Server</title>
+  <meta name="description" content="georegistry_web - The Gloabal Geospatial Health Index Server">
+  <meta name="author" content="MVPDev - http://github.com/mvpdev/">
+  <!-- took out favicon & viewport links j.mp/bplateviewport -->
+  
+  <link rel="stylesheet" href="{% media_url %}/css/style.css">
+  <link rel="stylesheet" href="{% media_url %}/css/georegistry_web-custom.css">
+
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="{% media_url %}/js/modernizr-1.js"></script>
+  <script src="{% media_url %}/js/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8">
+// var data = {{data_json_dumps|safe}}
+	
+	var data = {
+	    "status": 200, 
+	    "total": 37, 
+	    "type": "FeatureCollection", 
+	    "features": [
+	        {
+	            "sinceid": 4, 
+	            "id": "GR_5b158e81101d0a2e2214", 
+	            "epoch": "1300300642", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_5b158e81101d0a2e2214.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Abdullahi Abduwa", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "68.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "7.0", 
+	                "phone": "7063000000.0", 
+	                "address": "Dangyatum", 
+	                "power_sources": "other", 
+	                "name": "Dangyatum Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "1822012121.0", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.172958850860596, 
+	                    9.7187268733978271
+	                ]
+	            }, 
+	            "_id": "5b158e81-e627-4709-9efb-101d0a2e2214"
+	        }, 
+	        {
+	            "sinceid": 5, 
+	            "id": "GR_10e83f0ef73f60ce6d7f", 
+	            "epoch": "1300300643", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_10e83f0ef73f60ce6d7f.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Umar Alhasan", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "45.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "phone": "8062000000.0", 
+	                "address": "off gwari road", 
+	                "power_sources": "other", 
+	                "name": "romawa pr. school", 
+	                "school_type": "primary", 
+	                "local_id": "1822043222.0", 
+	                "contact_position": "head teacher"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.178580760955811, 
+	                    9.6372896432876587
+	                ]
+	            }, 
+	            "_id": "10e83f0e-fe94-4098-a663-f73f60ce6d7f"
+	        }, 
+	        {
+	            "sinceid": 10, 
+	            "id": "GR_ed63db3dd395cadf3ca7", 
+	            "epoch": "1300300647", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_ed63db3dd395cadf3ca7.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Maazizamu Malam", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "27.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "address": "titin kofar fada", 
+	                "power_sources": "other", 
+	                "name": "aducuwa  pr. school", 
+	                "school_type": "primary", 
+	                "local_id": "7061994553.0", 
+	                "contact_position": "headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.159907221794128, 
+	                    9.6508079767227173
+	                ]
+	            }, 
+	            "_id": "ed63db3d-a79f-49ef-89ae-d395cadf3ca7"
+	        }, 
+	        {
+	            "sinceid": 12, 
+	            "id": "GR_9ef13d03c87312febe02", 
+	            "epoch": "1300300648", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_9ef13d03c87312febe02.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Baba Ibrahim", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "48.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "phone": "7038000000.0", 
+	                "address": "Wayar", 
+	                "power_sources": "other", 
+	                "name": "Miga Gabas Pr. Sch", 
+	                "school_type": "primary", 
+	                "local_id": "1822038121.0", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.239595651626587, 
+	                    9.7176861763000488
+	                ]
+	            }, 
+	            "_id": "9ef13d03-18cf-452a-9033-c87312febe02"
+	        }, 
+	        {
+	            "sinceid": 13, 
+	            "id": "GR_0e3f8b410efbb6664e9c", 
+	            "epoch": "1300300648", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_0e3f8b410efbb6664e9c.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Mohammed Shahada", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "40.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "6.0", 
+	                "phone": "8036000000.0", 
+	                "address": "Galauchime", 
+	                "power_sources": "other", 
+	                "name": "Galauchime pr.sch", 
+	                "school_type": "primary", 
+	                "local_id": "1822016121.0", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.281411290168762, 
+	                    9.768218994140625
+	                ]
+	            }, 
+	            "_id": "0e3f8b41-fd7b-4fab-a369-0efbb6664e9c"
+	        }, 
+	        {
+	            "sinceid": 15, 
+	            "id": "GR_fb7383e24b199226958f", 
+	            "epoch": "1300300649", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_fb7383e24b199226958f.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Ibrahim Danlami", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "15.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "35.0", 
+	                "phone": "7031000000.0", 
+	                "address": "none", 
+	                "power_sources": "other", 
+	                "name": "Sarawuya", 
+	                "school_type": "primary", 
+	                "local_id": "1106.0", 
+	                "contact_position": "Asst.Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.235507965087891, 
+	                    9.5568716526031494
+	                ]
+	            }, 
+	            "_id": "fb7383e2-b689-4284-8fb9-4b199226958f"
+	        }, 
+	        {
+	            "sinceid": 16, 
+	            "id": "GR_a65ad5acbd53bf6be1a0", 
+	            "epoch": "1300300649", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_a65ad5acbd53bf6be1a0.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Ishak  Isah", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "0.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "12.0", 
+	                "phone": "7036000000.0", 
+	                "address": "Along Dabe road.", 
+	                "power_sources": "other", 
+	                "name": "Nomadic Primary  School Sabonsara", 
+	                "school_type": "primary", 
+	                "local_id": "None", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.294098138809204, 
+	                    9.6334755420684814
+	                ]
+	            }, 
+	            "_id": "a65ad5ac-0f1a-498e-a69b-bd53bf6be1a0"
+	        }, 
+	        {
+	            "sinceid": 17, 
+	            "id": "GR_46f1e337ece1a53fc186", 
+	            "epoch": "1300300649", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_46f1e337ece1a53fc186.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Mamuda Hamza", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "94.0", 
+	                "classrooms_multiple_use": "2.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "4.0", 
+	                "phone": "7030000000.0", 
+	                "address": "Jahun Gujungu road", 
+	                "power_sources": "other", 
+	                "name": "Tsakuwawa Central Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "1822054121.0", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.167213559150696, 
+	                    9.6070182323455811
+	                ]
+	            }, 
+	            "_id": "46f1e337-9941-4ea8-9649-ece1a53fc186"
+	        }, 
+	        {
+	            "sinceid": 19, 
+	            "id": "GR_bf204985c200718cdff9", 
+	            "epoch": "1300300650", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_bf204985c200718cdff9.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Yahaya Mohammed", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "0.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "40.0", 
+	                "address": "Tsakuwawa road", 
+	                "power_sources": "other", 
+	                "name": "Ummadu primary school", 
+	                "school_type": "primary", 
+	                "local_id": "no", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.169327139854431, 
+	                    9.6249890327453613
+	                ]
+	            }, 
+	            "_id": "bf204985-d0de-4532-bcff-c200718cdff9"
+	        }, 
+	        {
+	            "sinceid": 21, 
+	            "id": "GR_0d75b8d652eefc28d1b4", 
+	            "epoch": "1300300650", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_0d75b8d652eefc28d1b4.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Garba Bala", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "45.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "address": "Along Gidan Nagari", 
+	                "power_sources": "other", 
+	                "name": "Gululu primary school", 
+	                "school_type": "primary", 
+	                "local_id": "1822018121.0", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.165180444717407, 
+	                    9.5877063274383545
+	                ]
+	            }, 
+	            "_id": "0d75b8d6-c127-4e7e-ac1b-52eefc28d1b4"
+	        }, 
+	        {
+	            "sinceid": 23, 
+	            "id": "GR_156bebaa22d5c1b66d76", 
+	            "epoch": "1300300672", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_156bebaa22d5c1b66d76.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Idris Mohammad", 
+	                "curriculum_type": "integrated", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "0.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "56.0", 
+	                "phone": "7066000000.0", 
+	                "address": "A long Daba Sabongari Road", 
+	                "name": "Daba Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "None", 
+	                "contact_position": "Head Master"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.313780188560486, 
+	                    9.6241575479507446
+	                ]
+	            }, 
+	            "_id": "156bebaa-d270-4bf1-83bc-22d5c1b66d76"
+	        }, 
+	        {
+	            "sinceid": 24, 
+	            "id": "GR_7f7eb963d5d667c152fc", 
+	            "epoch": "1300300672", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_7f7eb963d5d667c152fc.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Samaila Sulaiman", 
+	                "curriculum_type": "integrated", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "79.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "phone": "8031000000.0", 
+	                "address": "Tsagaiwa", 
+	                "power_sources": "solar_system", 
+	                "name": "Tsagaiwa Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "1822853121.0", 
+	                "contact_position": "Head Master"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.320544719696045, 
+	                    9.6389740705490112
+	                ]
+	            }, 
+	            "_id": "7f7eb963-c209-4267-8c37-d5d667c152fc"
+	        }, 
+	        {
+	            "sinceid": 25, 
+	            "id": "GR_669a18ec7ffa74f4e5c4", 
+	            "epoch": "1300300672", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_669a18ec7ffa74f4e5c4.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Lawan Ahmed", 
+	                "curriculum_type": "integrated", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "0.0", 
+	                "classrooms_multiple_use": "2.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "phone": "8134000000.0", 
+	                "address": "Danki village", 
+	                "power_sources": "solar_system", 
+	                "name": "Danki Nomadic Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "nil", 
+	                "contact_position": "Head Master"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.313034534454346, 
+	                    9.6063584089279175
+	                ]
+	            }, 
+	            "_id": "669a18ec-3f26-4dfb-87f3-7ffa74f4e5c4"
+	        }, 
+	        {
+	            "sinceid": 26, 
+	            "id": "GR_e1c99b2273e91de971c2", 
+	            "epoch": "1300300673", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_e1c99b2273e91de971c2.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Abdulrashid Abdullahi", 
+	                "curriculum_type": "integrated", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "0.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "56.0", 
+	                "phone": "8037000000.0", 
+	                "address": "Along Jahun,Gujungu Road", 
+	                "name": "Dunnaka Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "1822042221.0", 
+	                "contact_position": "Head Master"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.298995852470398, 
+	                    9.5656853914260864
+	                ]
+	            }, 
+	            "_id": "e1c99b22-d840-4c53-8939-73e91de971c2"
+	        }, 
+	        {
+	            "sinceid": 28, 
+	            "id": "GR_4a31643a672026d653ca", 
+	            "epoch": "1300300673", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_4a31643a672026d653ca.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Adamu Haruna", 
+	                "curriculum_type": "integrated", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "0.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "75.0", 
+	                "phone": "7036000000.0", 
+	                "address": "Jamaga", 
+	                "name": "Jamaga Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "None", 
+	                "contact_position": "Head Master"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.303029894828796, 
+	                    9.6595734357833862
+	                ]
+	            }, 
+	            "_id": "4a31643a-5005-4ed1-96b3-672026d653ca"
+	        }, 
+	        {
+	            "sinceid": 29, 
+	            "id": "GR_1b99d2ee7b5a49459ea7", 
+	            "epoch": "1300300673", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_1b99d2ee7b5a49459ea7.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Salisu Ibrahim", 
+	                "curriculum_type": "integrated", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "56.0", 
+	                "classrooms_multiple_use": "1.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "phone": "8061000000.0", 
+	                "address": "Along Jahun,Gujungu Road", 
+	                "name": "Hantsu Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "1822020121.0", 
+	                "contact_position": "Head Master"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.220879197120667, 
+	                    9.5942831039428711
+	                ]
+	            }, 
+	            "_id": "1b99d2ee-f382-4373-9130-7b5a49459ea7"
+	        }, 
+	        {
+	            "sinceid": 31, 
+	            "id": "GR_2d70cb8b7d9c4fdd311f", 
+	            "epoch": "1300300674", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_2d70cb8b7d9c4fdd311f.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Sale Dandibi", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "21.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "phone": "8121000000.0", 
+	                "address": "Takalafiya", 
+	                "power_sources": "other", 
+	                "name": "Takalafiya  Central    primary School", 
+	                "school_type": "primary", 
+	                "local_id": "none", 
+	                "contact_position": "H M"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.153732776641846, 
+	                    9.7559612989425659
+	                ]
+	            }, 
+	            "_id": "2d70cb8b-460a-4596-9f90-7d9c4fdd311f"
+	        }, 
+	        {
+	            "sinceid": 33, 
+	            "id": "GR_d597cedf336fb8b46416", 
+	            "epoch": "1300300674", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_d597cedf336fb8b46416.json", 
+	                "country_code": "NG", 
+	                "contact_name": "A bdullahi   Hussaini Garbo", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "0.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "phone": "8021000000.0", 
+	                "address": "mazawa", 
+	                "power_sources": "other", 
+	                "name": "Mazawa  primary s chool", 
+	                "school_type": "primary", 
+	                "local_id": "0.0", 
+	                "contact_position": "H    M"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.155572772026062, 
+	                    9.7405761480331421
+	                ]
+	            }, 
+	            "_id": "d597cedf-bbb1-476f-a0d1-336fb8b46416"
+	        }, 
+	        {
+	            "sinceid": 36, 
+	            "id": "GR_f2507bff8d33cb358b30", 
+	            "epoch": "1300300680", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_f2507bff8d33cb358b30.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Garba Mohammed", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "0.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "phone": "8030000000.0", 
+	                "address": "Nafadawa", 
+	                "name": "Nafadawa Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "none", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.223953008651733, 
+	                    9.8245346546173096
+	                ]
+	            }, 
+	            "_id": "f2507bff-0117-4e02-9f97-8d33cb358b30"
+	        }, 
+	        {
+	            "sinceid": 37, 
+	            "id": "GR_073b8b167efb7fe50db1", 
+	            "epoch": "1300300680", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_073b8b167efb7fe50db1.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Mohammed Madaki", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "22.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "phone": "7087000000.0", 
+	                "address": "Koya", 
+	                "name": "Koya Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "1822035121.0", 
+	                "contact_position": "Teacher"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.232450246810913, 
+	                    9.845198392868042
+	                ]
+	            }, 
+	            "_id": "073b8b16-d8fb-425f-861f-7efb7fe50db1"
+	        }, 
+	        {
+	            "sinceid": 38, 
+	            "id": "GR_0ce123c5f6f4c6ac9eb2", 
+	            "epoch": "1300300681", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_0ce123c5f6f4c6ac9eb2.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Babannan Aliyu", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "108.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "36.0", 
+	                "phone": "8126000000.0", 
+	                "address": "Zareku", 
+	                "name": "Zareku Central Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "1822058121.0", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.165550589561462, 
+	                    9.7921121120452881
+	                ]
+	            }, 
+	            "_id": "0ce123c5-5756-4e72-a15f-f6f4c6ac9eb2"
+	        }, 
+	        {
+	            "sinceid": 39, 
+	            "id": "GR_3a1b9a55a861b9cde82b", 
+	            "epoch": "1300300681", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_3a1b9a55a861b9cde82b.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Umar Ahmed", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "40.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "40.0", 
+	                "phone": "8083000000.0", 
+	                "address": "Mudubawa", 
+	                "name": "Mudubawa Nomadic Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "none", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.215986847877502, 
+	                    9.8344963788986206
+	                ]
+	            }, 
+	            "_id": "3a1b9a55-8e20-4300-8726-a861b9cde82b"
+	        }, 
+	        {
+	            "sinceid": 40, 
+	            "id": "GR_56c86271b5cbb649c6dd", 
+	            "epoch": "1300300681", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_56c86271b5cbb649c6dd.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Saidu Yalwa", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "0.0", 
+	                "classrooms_multiple_use": "2.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "address": "Dabaka", 
+	                "name": "Dabaka Ladan Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "none", 
+	                "contact_position": "Teacher"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.205950021743774, 
+	                    9.7973424196243286
+	                ]
+	            }, 
+	            "_id": "56c86271-f324-460e-aefc-b5cbb649c6dd"
+	        }, 
+	        {
+	            "sinceid": 41, 
+	            "id": "GR_7d64c6ed6350b0557a05", 
+	            "epoch": "1300300682", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_7d64c6ed6350b0557a05.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Garba Uba", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "69.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "69.0", 
+	                "phone": "7053000000.0", 
+	                "address": "Kirnande", 
+	                "name": "Kirnande Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "1822033121.0", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.200129628181458, 
+	                    9.8114669322967529
+	                ]
+	            }, 
+	            "_id": "7d64c6ed-3592-4f9f-adee-6350b0557a05"
+	        }, 
+	        {
+	            "sinceid": 44, 
+	            "id": "GR_254d0405a029d928ef42", 
+	            "epoch": "1300300682", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_254d0405a029d928ef42.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Aliyu Yakubu Garbo", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "0.0", 
+	                "classrooms_multiple_use": "2.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "phone": "7060000000.0", 
+	                "address": "Walawa", 
+	                "name": "Dabakan Galadima Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "none", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.206389904022217, 
+	                    9.7899395227432251
+	                ]
+	            }, 
+	            "_id": "254d0405-4c8d-43e5-8f1a-a029d928ef42"
+	        }, 
+	        {
+	            "sinceid": 47, 
+	            "id": "GR_a5cb88af1cacc60a32b0", 
+	            "epoch": "1300300683", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_a5cb88af1cacc60a32b0.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Haruna Dauda", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "92.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "92.0", 
+	                "phone": "8026000000.0", 
+	                "address": "Sansani", 
+	                "name": "Sansani Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "JG00440", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.230127453804016, 
+	                    9.8005074262619019
+	                ]
+	            }, 
+	            "_id": "a5cb88af-be71-4b1e-8251-1cacc60a32b0"
+	        }, 
+	        {
+	            "sinceid": 49, 
+	            "id": "GR_8e233752bc1054f2fe93", 
+	            "epoch": "1300300684", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_8e233752bc1054f2fe93.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Rabiu Yunusa", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "17.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "17.0", 
+	                "phone": "8066000000.0", 
+	                "address": "Muduga Tsohuwa", 
+	                "name": "Muduga Primary School", 
+	                "school_type": "primary", 
+	                "local_id": "none", 
+	                "contact_position": "Head Teacher"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.233667969703674, 
+	                    9.7899556159973145
+	                ]
+	            }, 
+	            "_id": "8e233752-53ef-4a19-bd63-bc1054f2fe93"
+	        }, 
+	        {
+	            "sinceid": 50, 
+	            "id": "GR_9a13d4e7e03ac0d022a9", 
+	            "epoch": "1300300684", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_9a13d4e7e03ac0d022a9.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Absent (Sick)", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "38.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "38.0", 
+	                "phone": "0.0", 
+	                "address": "Komai Allah Yayi Prim. Sch.", 
+	                "power_sources": "other", 
+	                "name": "Komai Allah Yayi Prlm. School", 
+	                "school_type": "primary", 
+	                "local_id": "1822034121.0", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.22352921962738, 
+	                    9.7535848617553711
+	                ]
+	            }, 
+	            "_id": "9a13d4e7-e566-4c3f-bebd-e03ac0d022a9"
+	        }, 
+	        {
+	            "sinceid": 51, 
+	            "id": "GR_eccf30549672ca462058", 
+	            "epoch": "1300300684", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_eccf30549672ca462058.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Mohd Ibrahim Dangyatin", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "123.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "123.0", 
+	                "phone": "8085000000.0", 
+	                "address": "Dangyatin Miga Road", 
+	                "power_sources": "other", 
+	                "name": "Nasarawa Prim. Sch.", 
+	                "school_type": "primary", 
+	                "local_id": "1822041121.0", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.208347916603088, 
+	                    9.7166883945465088
+	                ]
+	            }, 
+	            "_id": "eccf3054-3421-45e3-b267-9672ca462058"
+	        }, 
+	        {
+	            "sinceid": 52, 
+	            "id": "GR_e591644c7d541788a1a4", 
+	            "epoch": "1300300684", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_e591644c7d541788a1a4.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Hassan Namadi", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "0.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "phone": "8139000000.0", 
+	                "address": "Shunawa Rumawa Road", 
+	                "power_sources": "other", 
+	                "name": "Shunawa Prim. Sch.", 
+	                "school_type": "primary", 
+	                "local_id": "8182251121.0", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.187281847000122, 
+	                    9.6563225984573364
+	                ]
+	            }, 
+	            "_id": "e591644c-5960-49d3-9c77-7d541788a1a4"
+	        }, 
+	        {
+	            "sinceid": 53, 
+	            "id": "GR_67d7f453ff7f1b7181f5", 
+	            "epoch": "1300300685", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_67d7f453ff7f1b7181f5.json", 
+	                "country_code": "NG", 
+	                "contact_name": "o", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "22.0", 
+	                "classrooms_multiple_use": "1.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "22.0", 
+	                "address": "Titin Sarki", 
+	                "power_sources": "other", 
+	                "name": "Kigawa Prim. Sch.", 
+	                "school_type": "primary", 
+	                "local_id": "0.0", 
+	                "contact_position": "o"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.207414507865906, 
+	                    9.7102993726730347
+	                ]
+	            }, 
+	            "_id": "67d7f453-3b5f-49ed-952a-ff7f1b7181f5"
+	        }, 
+	        {
+	            "sinceid": 54, 
+	            "id": "GR_1908b285435adeb2d92e", 
+	            "epoch": "1300300690", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_1908b285435adeb2d92e.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Aminu Abdullahi", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "81.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "4.0", 
+	                "phone": "8066000000.0", 
+	                "address": "Layin Masallachin Juma'a", 
+	                "power_sources": "other", 
+	                "name": "Damaganawa Prim. School", 
+	                "school_type": "primary", 
+	                "local_id": "JG P10604", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.202795743942261, 
+	                    9.6337062120437622
+	                ]
+	            }, 
+	            "_id": "1908b285-5cda-4d20-8f1c-435adeb2d92e"
+	        }, 
+	        {
+	            "sinceid": 56, 
+	            "id": "GR_15bc50904365b672cbf8", 
+	            "epoch": "1300300690", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_15bc50904365b672cbf8.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Adamu Sulaiman Miga", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "26.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "26.0", 
+	                "phone": "8039000000.0", 
+	                "address": "Miga Wa'ar", 
+	                "power_sources": "other", 
+	                "name": "Miga Model Prim. Sch.", 
+	                "school_type": "primary", 
+	                "local_id": "JG P00714", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.240448594093323, 
+	                    9.7202503681182861
+	                ]
+	            }, 
+	            "_id": "15bc5090-1d2e-4d4a-ae20-4365b672cbf8"
+	        }, 
+	        {
+	            "sinceid": 57, 
+	            "id": "GR_4d80e01c7e8d2920db56", 
+	            "epoch": "1300300691", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_4d80e01c7e8d2920db56.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Sama,ila Adamu", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "21.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "2.0", 
+	                "phone": "7040000000.0", 
+	                "address": "Titin Dandali", 
+	                "power_sources": "other", 
+	                "name": "Yanduna Prim. School", 
+	                "school_type": "primary", 
+	                "local_id": "1822023131.0", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.169010639190674, 
+	                    9.6777266263961792
+	                ]
+	            }, 
+	            "_id": "4d80e01c-1adb-4207-8325-7e8d2920db56"
+	        }, 
+	        {
+	            "sinceid": 59, 
+	            "id": "GR_7095f1adf5c35dbd5ad3", 
+	            "epoch": "1300300691", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_7095f1adf5c35dbd5ad3.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Garba Umar", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "100.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "100.0", 
+	                "phone": "8122000000.0", 
+	                "address": "Makeran Dabinai", 
+	                "power_sources": "other", 
+	                "name": "Makera Prim. Sch.", 
+	                "school_type": "primary", 
+	                "local_id": "1822036121.0", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.205429673194885, 
+	                    9.7442561388015747
+	                ]
+	            }, 
+	            "_id": "7095f1ad-83de-4406-a758-f5c35dbd5ad3"
+	        }, 
+	        {
+	            "sinceid": 60, 
+	            "id": "GR_cb50934e13bb670708e3", 
+	            "epoch": "1300300692", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_cb50934e13bb670708e3.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Hamza Dauda", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "27.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "27.0", 
+	                "phone": "7038000000.0", 
+	                "address": "Gwari Tsakuwawa Road", 
+	                "power_sources": "other", 
+	                "name": "Gwari Prim. Sch.", 
+	                "school_type": "primary", 
+	                "local_id": "JGP01104", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.196406722068787, 
+	                    9.6873718500137329
+	                ]
+	            }, 
+	            "_id": "cb50934e-e1dc-4aca-a07f-13bb670708e3"
+	        }, 
+	        {
+	            "sinceid": 63, 
+	            "id": "GR_8f10681ce56c01719659", 
+	            "epoch": "1300300698", 
+	            "type": "Feature", 
+	            "properties": {
+	                "subdivision_code": "JI", 
+	                "href": "http://api.georegistry.org/api/1.0/feature/GR_8f10681ce56c01719659.json", 
+	                "country_code": "NG", 
+	                "contact_name": "Mohd Isah", 
+	                "curriculum_type": "formal", 
+	                "religious": "no", 
+	                "verified": false, 
+	                "feature_type": "school", 
+	                "benches_chairs": "0.0", 
+	                "classrooms_multiple_use": "0.0", 
+	                "email": "a@v.com", 
+	                "level3_admin_boarder_code": "Miga", 
+	                "desks": "0.0", 
+	                "phone": "7066000000.0", 
+	                "address": "Maiwando Dingare", 
+	                "power_sources": "other", 
+	                "name": "Maiwando Dingare Prim. Sch. (Tempirary Side)", 
+	                "school_type": "primary", 
+	                "local_id": "0.0", 
+	                "contact_position": "Headmaster"
+	            }, 
+	            "geometry": {
+	                "type": "Point", 
+	                "coordinates": [
+	                    12.300122380256653, 
+	                    9.7303783893585205
+	                ]
+	            }, 
+	            "_id": "8f10681c-0039-4f7c-bdcc-e56c01719659"
+	        }
+	    ]
+	};
+	
+	var data2 = {{d|safe}};
+  </script>
+
+</head>
+
+
+<body class="wide">
+
+<div class="container-wrap">
+  <div id="container">
+    <header class="clearfix">
+		<p class="info-bar time-wrapper">Your Local Time: <span class="local-time">14:17:41</span> on <span class="local-day">Wednesday</span></p>
+		<p class="info-bar links">
+			<a href="http://georegistry.org/">home</a>|
+			<a href="http://readthedocs.org/docs/georegistry/latest/">docs</a>
+		</p>
+    </header>
+    <div id="main" role="main"></div>
+    <footer>
+		<p>© 2011 – <a href="http://www.earth.columbia.edu/">The Earth Institute – Columbia University</a></p>
+    </footer>
+  </div> <!--! end of #container -->
+</div>
+  <!-- JavaScript at the bottom for fast page loading -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  <script>window.jQuery || document.write("<script src='http://www.georegistry.org/site_media/boilerplate/js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
+
+  <!-- scripts -->
+  <script src="{% media_url %}/js/plugins.js"></script>
+  <script src="{% media_url %}/js/script.js"></script>
+<!--
+Hello Alan.
+
+the script below ("gr-slider-demo.js") is a jQuery plugin that will load the data 
+and display the table rows which are clickable and displayable on the map.
+
+This code needs to be included in the page after jquery has loaded.
+In trkr's base templates, you can include this code in "block scripts".
+
+Begin GR-SLIDER-DEMO-INCLUDE:
+-->
+  <script src="{% media_url %}/js/gr-slider-demo.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+	function mapLoaded() {
+	  
+		$('#main').html($.buildGrMapTable(data2));
+
+		// for passing from django templates, use this
+		// var data = {{data_json_dumps|safe}}
+		
+		/*--
+		for an AJAX link, correct this url.
+		$.getJSON("/path/to/url/", function(data){
+			$('#main').html($.buildGrMapTable(data));
+		})
+		--*/
+		
+	}
+  </script>
+  <script src="http://maps.google.com/maps/api/js?sensor=false&callback=mapLoaded" type="text/javascript" charset="utf-8"></script>
+
+<!-- 
+End Begin GR-SLIDER-DEMO-INCLUDE
+ -->
+  
+  <!-- end scripts -->
+  
+  <!--[if lt IE 7 ]>
+    <script src="{% media_url %}/boilerplate/js/libs/dd_belatedpng.js"></script>
+    <script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+  <![endif]-->
+
+  <!-- took out google analytics script -->
+
+</body></html>

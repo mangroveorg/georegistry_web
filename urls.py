@@ -10,6 +10,8 @@ urlpatterns = patterns('',
 
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 
+    #(r'^display/', direct_to_template, {'template': 'web/display.html'}),
+
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
 
