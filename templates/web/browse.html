@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block extra_head %}
+
+
+{% endblock %}
+
+{% block featureBox %}
+
+<h1>Browse:</h1>
+<ol>
+   
+   {% for key,value in subdivisions.items %}
+   <li> {{key}} </li>
+      {% for i in value %}
+      <ul>
+         <li><a HREF="/display/search/?country_code={{key}}&subdivision_code={{i}}"> {{i}} </a></li>
+      </ul>
+      {% endfor %}
+   {% endfor %}
+</ol>
+   
+{% endblock %}

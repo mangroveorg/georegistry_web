@@ -13,35 +13,18 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from forms import *
     
-def browse(request, kwargs):
+def browse(request):
     """
         Plot multiple points based on a kwarg dict
     """
-    data = urllib.urlencode(kwargs) 
-    URL="api/v1/features/search?%s" % (data)
+    #data = urllib.urlencode(kwargs) 
+    URL="api/1.0/features/subdivisions"
     
-    r= query_georegistry(URL)
-    d=json.loads(r)
-    if d['status']==200:
-        total=d['total']
-        gr_id_list=[]
+    r = query_georegistry(URL)
     
-        for i in d['features']:
-            c=0
-            pointsitems=[]
-            geomtype=i['geometry']['type']
-            if geomtype=="Point": 
-                gr_id=i['properties']['id']
-                gr_name=i['properties']['name']
-                
-                gr_id_list.append({'gr_id': gr_id, 'gr_name': gr_name })
-    else:
-        jsonstr = json.dumps(d, indent=4)	
-        return HttpResponse(jsonstr, status=d['status'],
-                                mimetype='application/json')
-        
-    return render_to_response("list.html", {'gr_id_list': gr_id_list,
-                                            'total': total },
+    subdivisions = json.loads(r)
+    print subdivisions        
+    return render_to_response("web/browse.html", {'subdivisions': subdivisions},
                               context_instance = RequestContext(request),)
     
 def by_country_and_subdivision(request):
