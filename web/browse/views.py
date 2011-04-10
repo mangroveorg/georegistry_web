@@ -11,20 +11,19 @@ from georegistry_web.web.gmap.utils import query_georegistry
 import urllib
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from forms import *
     
 def browse(request):
     """
         Plot multiple points based on a kwarg dict
     """
     #data = urllib.urlencode(kwargs) 
-    URL="api/1.0/features/subdivisions"
+    URL="api/1.0/features/locations"
     
     r = query_georegistry(URL)
     
-    subdivisions = json.loads(r)
-    print subdivisions        
-    return render_to_response("web/browse.html", {'subdivisions': subdivisions},
+    locations = json.loads(r)
+       
+    return render_to_response("web/browse.html", {'locations': locations},
                               context_instance = RequestContext(request),)
     
 def by_country_and_subdivision(request):

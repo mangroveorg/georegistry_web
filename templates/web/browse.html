@@ -9,12 +9,21 @@
 <h1>Browse:</h1>
 <ol>
    
-   {% for key,value in subdivisions.items %}
-   <li> {{key}} </li>
-      {% for i in value %}
+   {% for topkey,topvalue in locations.items %}
+   <li> {{topvalue.name}} </li>
+      {% for child in topvalue.children %}
+      
       <ul>
-         <li><a HREF="/display/search/?country_code={{key}}&subdivision_code={{i}}"> {{i}} </a></li>
+         <li><a HREF="/display/search/?country_code={{topvalue.country_code}}&subdivision_code={{child.subdivision_code}}"> {{child.name}} </a></li>
+      {% for gchild in child.children %}
+      <ul>
+          <li><a HREF="/display/search/?country_code={{topvalue.country_code}}&subdivision_code={{child.subdivision_code}}&level3_admin_boarder_code={{gchild.name}}"> {{gchild.name}} </a></li>
+         </ul>
+      {% endfor %}
+      
       </ul>
+      
+      
       {% endfor %}
    {% endfor %}
 </ol>
