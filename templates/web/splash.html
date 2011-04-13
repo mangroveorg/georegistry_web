@@ -13,19 +13,48 @@
 <h1>Client Website Example</h1>
 <p><a HREF="http://api.georegistry.org">(Click here for the API site)</a>
 </p>
-<br> <br> 
+<br> <br>
+
+
+
+
+
+
     <h2>Introduction:</h2>
     <br>
     <p>Welcome to Georegistry.org, the geospatial health repository developed
     by the <a HREF="http://www.earth.columbia.edu/"> 
-    Earth Institute </a> at Columbia University.
+    Earth Institute</a> at Columbia University.
     <a HREF="/about">Read more...</a></p>
     <br><br>
-    <p>You can also <a HREF="/browse">browse </a> the Georegistry.
-    This feature is still under construction.</p>
-		
-  <br></br>
-  <br></br>
+
+    <br></br>
+    <p>
+    <h2>Total Features in Georegistry: {{total}}</h2>		
+    </p>
+    <br></br>
+   <p> 
+  <h2>Countries:</h2>
+  <ul>
+  {% for c  in countries %}
+  {% for k,v  in c.items %}
+  <li><a HREF="browse/{{k}}"> {{v.name}} ({{v.count}})</a></li>
+   {% endfor %}
+  {% endfor %}
+  </ul>
+  </p>
+   <br></br>
+   <p>
+  <h2>Categories:</h2>
+  <ul>
+   {% for c in categories %}
+   {% for k,v  in c.items %}
+  <li><a HREF="???">{{k}} ({{v}})</a></li>
+  {% endfor %}
+  {% endfor %}
+  </ul>
+  </p>
+
   <br></br>
   
   

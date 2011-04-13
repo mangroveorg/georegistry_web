@@ -4,7 +4,7 @@
 
 from django.conf.urls.defaults import *
 from django.views.generic.simple import direct_to_template
-
+from georegistry_web.web.splash.views import splash
 urlpatterns = patterns('',
     #add url paths for our web apps here
     #url(r'^/', direct_to_template, {'template': 'web/index.html'}),
@@ -14,5 +14,5 @@ urlpatterns = patterns('',
     (r'display/', include('georegistry_web.web.displaylist.urls')),
     (r'table/', include('georegistry_web.web.table.urls')),
     (r'browse/', include('georegistry_web.web.browse.urls')),
-    url(r'^$', direct_to_template, {'template': 'web/splash.html'}),
+    url(r'^$', splash, name="splash"),
 )

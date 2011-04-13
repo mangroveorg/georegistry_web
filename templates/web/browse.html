@@ -1,31 +1,48 @@
 {% extends "base.html" %}
-{% block extra_head %}
 
-
-{% endblock %}
 
 {% block featureBox %}
 
+<meta charset="utf-8">
+{% load media %}
+<script src="{% media_url %}/js/jquery.js"></script>
+
+<script>
+$(document).ready(function() {
+    $("#menu ul ul").hide();    
+    $("#menu ul li").click(function(e) {
+      $(this).children("ul").toggle('fade');
+      e.stopPropagation();
+    });
+});
+</script>
+
+
 <h1>Browse:</h1>
-<ol>
+<div id="menu">
    
-   {% for topkey,topvalue in locations.items %}
-   <li> {{topvalue.name}} </li>
-      {% for child in topvalue.children %}
-      
-      <ul>
-         <li><a HREF="/display/search/?country_code={{topvalue.country_code}}&subdivision_code={{child.subdivision_code}}"> {{child.name}} </a></li>
-      {% for gchild in child.children %}
-      <ul>
-          <li><a HREF="/display/search/?country_code={{topvalue.country_code}}&subdivision_code={{child.subdivision_code}}&level3_admin_boarder_code={{gchild.name}}"> {{gchild.name}} </a></li>
-         </ul>
-      {% endfor %}
-      
-      </ul>
-      
-      
-      {% endfor %}
-   {% endfor %}
-</ol>
+    <ul>
+      {% for topkey,topvalue in locations.items %}
+        <li><a id="{{topvalue.slug}}" href=#>{{topvalue.name}}</a>            
+            <ul>
+                {% for child in topvalue.children %}
+               <li><a HREF="/display/search/?country_code={{topvalue.country_code}}&subdivision_code={{child.subdivision_code}}"> {{child.name}} </a></li>
+                
    
+            <ul>
+                {% for gchild in child.children %}
+               <li>
+                  <a HREF="/display/search/?country_code={{topvalue.country_code}}&subdivision_code={{child.subdivision_code}}&level3_admin_boarder_code={{gchild.name}}"> {{gchild.name}} </a>
+               </li>
+               {% endfor %}
+            </ul>
+            {% endfor %}
+                
+                
+            </ul>
+        </li>
+       {% endfor %}
+    </ul>
+    
+</div>
 {% endblock %}

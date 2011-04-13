@@ -12,15 +12,15 @@ import urllib
 from django.shortcuts import render_to_response
 from django.template import RequestContext
     
-def browse(request):
+def browse(request, country_code):
     """
         Plot multiple points based on a kwarg dict
     """
     #data = urllib.urlencode(kwargs) 
-    URL="api/1.0/features/locations"
+    URL="api/1.0/features/locations?country_code=%s" % (country_code)
     
     r = query_georegistry(URL)
-    
+    print r
     locations = json.loads(r)
        
     return render_to_response("web/browse.html", {'locations': locations},
