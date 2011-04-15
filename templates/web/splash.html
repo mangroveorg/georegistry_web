@@ -15,11 +15,6 @@
 </p>
 <br> <br>
 
-
-
-
-
-
     <h2>Introduction:</h2>
     <br>
     <p>Welcome to Georegistry.org, the geospatial health repository developed
@@ -37,9 +32,9 @@
   <h2>Countries:</h2>
   <ul>
   {% for c  in countries %}
-  {% for k,v  in c.items %}
-  <li><a HREF="browse/{{k}}"> {{v.name}} ({{v.count}})</a></li>
-   {% endfor %}
+	{% for k,v  in c.items %}
+		<li><a HREF="browse/{{k}}"> {{v.name}} ({{v.count}})</a></li>
+	{% endfor %}
   {% endfor %}
   </ul>
   </p>
@@ -48,32 +43,14 @@
   <h2>Categories:</h2>
   <ul>
    {% for c in categories %}
-   {% for k,v  in c.items %}
-  <li><a HREF="???">{{k}} ({{v}})</a></li>
-  {% endfor %}
+	{% for k,v  in c.items %}
+		<li><a HREF="???">{{k}} ({{v}})</a></li>
+	{% endfor %}
   {% endfor %}
   </ul>
   </p>
 
   <br></br>
   
-  
-  
-  <h2>Example Queries:</h2>
-<ul>
-
-<li><a href="/gmap/search/?school_type=primary&religious=no&country_code=NG&subdivision_code=JI">
-Search Example 1: All religious primary schools in Miga (Nigeria) in Google Maps</a></li>
-
-<li><a href="/display/search/?school_type=primary&religious=no&country_code=NG&subdivision_code=JI">
-NEW! Search Example 2: All religious primary schools in Miga (Nigeria) in as a list</a></li>
-
-<li><a href="/list/search/?school_type=primary&religious=no&country_code=NG&subdivision_code=JI">
-Search Example 3: All religious primary schools in Miga (Nigeria) in as a list</a></li>
-
-</ul>
-  
- <br></br>  
-    <img src="{% media_url %}/img/Rsrch_HomeBanner_2.jpg"></img>
     <p>Please pardon our mess.  This site is still under construction. :-)</p>
 {% endblock %}
