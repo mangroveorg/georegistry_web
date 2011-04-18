@@ -7,7 +7,7 @@ from views import *
 from django.views.generic.simple import direct_to_template
 
 urlpatterns = patterns('',
-    #url(r'^$', browse, name="browse"),
+    url(r'^countries$', browse, name="browsecountries"),
     url(r'^(?P<country_code>[^/]+)$', browse, name="browse"),
     #url(r'^by-country/$', by_country, name="by_country"),
     #url(r'^by-country-and-subdivision/$', by_country_and_subdivision, name="by_country_and_subdivision")

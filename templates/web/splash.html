@@ -10,16 +10,9 @@
 {% load media %}
  <img src="{% media_url %}/img/georegistry_logo.png"></img>
 <br> <br> 
-<h1>Client Website Example</h1>
-<p><a HREF="http://api.georegistry.org">(Click here for the API site)</a>
-</p>
-<br> <br>
-
     <h2>Introduction:</h2>
     <br>
-    <p>Welcome to Georegistry.org, the geospatial health repository developed
-    by the <a HREF="http://www.earth.columbia.edu/"> 
-    Earth Institute</a> at Columbia University.
+    <h3>Georegistry.org is a global registry of places and things.
     <a HREF="/about">Read more...</a></p>
     <br><br>
 
@@ -29,7 +22,7 @@
     </p>
     <br></br>
    <p> 
-  <h2>Countries:</h2>
+  <h2><a HREF="browse/countries">Countries:</a></h2>
   <ul>
   {% for c  in countries %}
 	{% for k,v  in c.items %}
@@ -51,6 +44,4 @@
   </p>
 
   <br></br>
-  
-    <p>Please pardon our mess.  This site is still under construction. :-)</p>
 {% endblock %}
