@@ -5,10 +5,13 @@
 import xlrd
 import sys
 from utils import create_feature_in_georegistry
-
-GR_SERVER="http://georegistry_web.org"
-GR_USER="aviars"
+import json
+GR_SERVER="http://127.0.0.1:8000"
+GR_USER="alan"
 GR_PASS="pass"
+
+c={"type":"place","category":"city", "subcategory": ""}
+classifiers=json.dumps(c)
 
 def excel2py(filename):
     book = xlrd.open_workbook(filename) #open our xls file,
@@ -35,8 +38,21 @@ def excel2py(filename):
     for i in data:
         #format the geometry_coordinates
         print "Uploading record #%s" % (counter)
-        splitgeo=i['geometry_coordinates'].split(" ")
-        i['geometry_coordinates']="[ %s, %s ]" %  (splitgeo[0],splitgeo[1])
+        if i.has_key('geometry_coordinates'):
+            splitgeo=i['geometry_coordinates'].split(" ")
+            i['geometry_coordinates']="[ %s, %s ]" %  (splitgeo[0],splitgeo[1])
+        elif i.has_key('lat') and i.has_key('lon'):
+            i['geometry_coordinates']="[ %s, %s ]" %  (i['lat'], i['lon'])
+            del i['lat']
+            del i['lon']
+        if not i.has_key('geometry_type'):
+            i['geometry_type']="Point"
+        
+        if not i.has_key('classifiers'):
+            i['classifiers']=classifiers  
+        
+        print i
+        print ""
         x= create_feature_in_georegistry(i, GR_SERVER, GR_USER, GR_PASS)
         print x
         counter+=1

@@ -14,7 +14,7 @@ def create_feature_in_georegistry(kwargs, GR_SERVER, GR_USER, GR_PASS):
         pf.append(x)
         
     user_and_pass="%s:%s" % (GR_USER, GR_PASS)
-    URL= GR_SERVER + "/api/v1/createfeature/"
+    URL= GR_SERVER + "/api/1.0/createfeature/"
     c = pycurl.Curl()
     c.setopt(pycurl.URL, URL)
     c.setopt(c.HTTPPOST, pf)
