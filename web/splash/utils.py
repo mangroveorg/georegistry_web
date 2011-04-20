@@ -16,12 +16,14 @@ def fetch_countries_count():
     countries=json.loads(r)
     cl=[]
     for c in countries:
-        URL="api/1.0/counters/cached-country/%s" % (c.keys()[0])
+        URL="api/1.0/counters/cached-country/%s" % (c['country_code'])
+        print URL
         count= query_georegistry(URL)
+        print URL, count
         count=json.loads(count)
 
         if count.has_key('count'):
-            c[c.keys()[0]].update({'count':count['count']})
+            c.update({'count':count['count']})
             cl.append(c)
 
     """Get list of categories and total objects in each"""

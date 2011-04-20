@@ -12,7 +12,7 @@ import urllib
 from django.shortcuts import render_to_response
 from django.template import RequestContext
     
-def browse(request, country_code=None):
+def browse(request, country_code):
     """
         Plot multiple points based on a kwarg dict
     """
@@ -22,12 +22,31 @@ def browse(request, country_code=None):
     else:
         URL="api/1.0/features/locations"
     r = query_georegistry(URL)
-    print r
-    locations = json.loads(r)
-       
-    return render_to_response("web/browse.html", {'locations': locations},
-                              context_instance = RequestContext(request),)
     
+    locations = json.loads(r)
+    #print type(locations)
+    
+    country_name=locations.keys()[0]
+    locations=locations[country_name]['children']
+    return render_to_response("web/browse.html", {'country_name': country_name,
+                                                  'country_code': country_code,
+                                                  'locations': locations},
+                              context_instance = RequestContext(request),)
+
+
+def browsecountries(request):
+    """
+        Plot multiple points based on a kwarg dict
+    """
+    #data = urllib.urlencode(kwargs) 
+
+    URL="api/1.0/features/countries"
+    l = query_georegistry(URL)
+    countries = json.loads(l)
+    print countries
+    return render_to_response("web/countries.html", {'countries': countries},
+                              context_instance = RequestContext(request),)
+
 def by_country_and_subdivision(request):
     
     

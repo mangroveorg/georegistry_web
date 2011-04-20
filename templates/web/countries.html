@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block featureBox %}
+
+
+<h1>Browse Countries:</h1>
+
+
+<div id="menu">
+    <ul>
+      {% for c in countries %}
+        <li><a href="/browse/{{c.country_code}}">{{c.name}}</a>
+        </li>
+        {% endfor %}
+
+    </ul>
+</div>
+
+{% endblock %}

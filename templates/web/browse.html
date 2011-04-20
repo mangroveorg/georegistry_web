@@ -6,10 +6,11 @@
 <meta charset="utf-8">
 {% load media %}
 <script src="{% media_url %}/js/jquery.js"></script>
-
 <script>
+
 $(document).ready(function() {
-    $("#menu ul ul").hide();    
+    $("#menu ul ul").hide();
+    
     $("#menu ul li").click(function(e) {
       $(this).children("ul").toggle('fade');
       e.stopPropagation();
@@ -17,32 +18,24 @@ $(document).ready(function() {
 });
 </script>
 
+<h1>Browse: <a href="/display/search/?country_code={{country_code}}">{{country_name}} ({{country_code}})</a></h1>
 
-<h1>Browse:</h1>
+
 <div id="menu">
-   
     <ul>
-      {% for topkey,topvalue in locations.items %}
-        <li><a id="{{topvalue.slug}}" href=#>{{topvalue.name}}</a>            
+      {% for c in locations %}
+        <li><a id="database" href="#">{{c.name}}</a>
+        
             <ul>
-                {% for child in topvalue.children %}
-               <li><a HREF="/display/search/?country_code={{topvalue.country_code}}&subdivision_code={{child.subdivision_code}}"> {{child.name}} </a></li>
-                
-   
-            <ul>
-                {% for gchild in child.children %}
-               <li>
-                  <a HREF="/display/search/?country_code={{topvalue.country_code}}&subdivision_code={{child.subdivision_code}}&level3_admin_boarder_code={{gchild.name}}"> {{gchild.name}} </a>
-               </li>
-               {% endfor %}
-            </ul>
-            {% endfor %}
-                
-                
+               <li><a href="/display/search/?country_code={{country_code}}&subdivision_code={{c.subdivision_code}}">All</a></li>
+                {% for gchild in c.children %}
+                <li><a href="/display/search/?country_code={{country_code}}&subdivision_code={{c.subdivision_code}}&level2_admin_boarder_code={{gchild.slug}}">{{gchild.name}}</a></li>
+                {% endfor %}
             </ul>
         </li>
-       {% endfor %}
+        {% endfor %}
+
     </ul>
-    
 </div>
+
 {% endblock %}
