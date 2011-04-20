@@ -6,7 +6,6 @@ def fetch_total_count():
     URL="api/1.0/counters/cached-total"
     r= query_georegistry(URL)
     total=json.loads(r)
-    print total
     return total['count']
 
 def fetch_countries_count():
@@ -17,9 +16,7 @@ def fetch_countries_count():
     cl=[]
     for c in countries:
         URL="api/1.0/counters/cached-country/%s" % (c['country_code'])
-        print URL
         count= query_georegistry(URL)
-        print URL, count
         count=json.loads(count)
 
         if count.has_key('count'):
@@ -38,7 +35,6 @@ def fetch_categories_count():
     for cl in classifiers:
         catlist.append(cl['category'])
     catlist=list(set(catlist))
-    print catlist
     
     for i in catlist:
         URL="api/1.0/counters/cached-classifier/category/%s" % (i)
@@ -47,6 +43,5 @@ def fetch_categories_count():
         if cat.has_key('count'):
             if cat['count'] > 0:
                 countlist.append({i :cat['count']})
-    print countlist
 
     return countlist

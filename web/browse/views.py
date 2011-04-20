@@ -43,7 +43,6 @@ def browsecountries(request):
     URL="api/1.0/features/countries"
     l = query_georegistry(URL)
     countries = json.loads(l)
-    print countries
     return render_to_response("web/countries.html", {'countries': countries},
                               context_instance = RequestContext(request),)
 
@@ -58,7 +57,6 @@ def by_country_and_subdivision(request):
             kwargs={'country_code':split_values[0]}
         if len(split_values)==2:
             kwargs={'country_code':split_values[0],'subdivision_code': split_values[1]}
-        print kwargs
         return browse(request, kwargs)
 
     

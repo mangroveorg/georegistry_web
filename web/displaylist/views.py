@@ -21,7 +21,6 @@ def displaylist_points(request, kwargs):
     data = urllib.urlencode(kwargs) 
     URL="api/1.0/features/search?%s" % (data)
     r= query_georegistry(URL)
-    print r
     d=json.loads(r)
     if d['status']==200:
 
