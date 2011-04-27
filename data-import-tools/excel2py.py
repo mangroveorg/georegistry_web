@@ -1,18 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # vim: ai ts=4 sts=4 et sw=4
-
+import slugify
 import xlrd
 import sys
 from utils import create_feature_in_georegistry
 import json
-GR_SERVER="http://127.0.0.1:8000"
-GR_USER="alan"
+GR_SERVER="http://api.georegistry.org"
+GR_USER="aviars"
 GR_PASS="pass"
 
-c={"type":"place","category":"city", "subcategory": ""}
-classifiers=json.dumps(c)
+#c={"type":"place","category":"locality", "subcategory": ""}
+#c={"type":"natural-resource","category":"water-point", "subcategory": ""}
 
+c={ "category": "locality", "type": "place", "subcategory": "" }
+classifiers=json.dumps(c)
+print classifiers
 def excel2py(filename):
     book = xlrd.open_workbook(filename) #open our xls file,
     sheet=book.sheets()[0]
@@ -35,28 +38,38 @@ def excel2py(filename):
             
     #now load our queryset-like object into the GR
     counter=0
+    txfailed=0
     for i in data:
         #format the geometry_coordinates
         print "Uploading record #%s" % (counter)
+        if i.has_key('name'):
+            i['name']="%s" %i['name']
+            i['name']=slugify.slugify(i['name'])
+            print i['name']
         if i.has_key('geometry_coordinates'):
             splitgeo=i['geometry_coordinates'].split(" ")
-            i['geometry_coordinates']="[ %s, %s ]" %  (splitgeo[0],splitgeo[1])
+            i['geometry_coordinates']="[ %s, %s ]" %  (splitgeo[0], splitgeo[1])
         elif i.has_key('lat') and i.has_key('lon'):
             i['geometry_coordinates']="[ %s, %s ]" %  (i['lat'], i['lon'])
             del i['lat']
             del i['lon']
         if not i.has_key('geometry_type'):
             i['geometry_type']="Point"
+            
+        if not i.has_key('subdivision_code'):
+            i['subdivision_code']="XX"
         
         if not i.has_key('classifiers'):
             i['classifiers']=classifiers  
         
-        print i
-        print ""
         x= create_feature_in_georegistry(i, GR_SERVER, GR_USER, GR_PASS)
         print x
+        x=json.loads(x)
+        if x["status"]!=200:
+          txfailed+=1
+          print "Failed"
         counter+=1
-    print "Done!  %s records processed." % (counter)
+    print "Done!  %s records processed. %s Failures." % (counter,txfailed )
     
 if __name__ == "__main__":
     
