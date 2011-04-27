@@ -25,6 +25,20 @@ def fetch_countries_count():
 
     """Get list of categories and total objects in each"""
     return cl
+
+
+def fetch_country_count(country_code):
+    """Get count for a country"""
+    URL="api/1.0/counters/cached-country/%s" % (country_code)
+    count= query_georegistry(URL)
+    try:
+        count=json.loads(count)
+        if count.has_key('count'):
+            return count
+        return None
+    except():
+        return None
+
     
 def fetch_categories_count():
     URL="api/1.0/features/classifiers"
