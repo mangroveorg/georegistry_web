@@ -34,7 +34,7 @@
   <ul>
    {% for c in categories %}
 	{% for k,v  in c.items %}
-		<li><a HREF="display/search/?classifiers.category={{k}}">{{k}} ({{v}})</a></li>
+		<li><a HREF="display/search/?classifiers.category={{k}}">{{k|title}} ({{v}})</a></li>
 	{% endfor %}
   {% endfor %}
   </ul>
