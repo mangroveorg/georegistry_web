@@ -28,7 +28,7 @@ def browse(request, country_code):
     
     country_name=locations.keys()[0]
     locations=locations[country_name]['children']
-    return render_to_response("web/browse.html", {'country_name': country_name,
+    return render_to_response("web/browse.html", {'country_name': country_name.title(),
                                                   'country_code': country_code,
                                                   'locations': locations},
                               context_instance = RequestContext(request),)
