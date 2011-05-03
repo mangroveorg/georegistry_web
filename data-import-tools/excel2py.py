@@ -6,16 +6,11 @@ import xlrd
 import sys
 from utils import create_feature_in_georegistry
 import json
-GR_SERVER="http://api.georegistry.org"
-GR_USER="aviars"
+GR_SERVER="http://127.0.0.1:8000"
+GR_USER="alan"
 GR_PASS="pass"
+classifiers="place.locality"
 
-#c={"type":"place","category":"locality", "subcategory": ""}
-#c={"type":"natural-resource","category":"water-point", "subcategory": ""}
-
-c={ "category": "locality", "type": "place", "subcategory": "" }
-classifiers=json.dumps(c)
-print classifiers
 def excel2py(filename):
     book = xlrd.open_workbook(filename) #open our xls file,
     sheet=book.sheets()[0]
@@ -63,13 +58,13 @@ def excel2py(filename):
             i['classifiers']=classifiers  
         
         x= create_feature_in_georegistry(i, GR_SERVER, GR_USER, GR_PASS)
-        print x
+        #print x
         x=json.loads(x)
-        if x["status"]!=200:
+        if x["status"]!="200":
           txfailed+=1
           print "Failed"
         counter+=1
-    print "Done!  %s records processed. %s Failures." % (counter,txfailed )
+    print "Done! %s records processed. %s Failures." % (counter, txfailed )
     
 if __name__ == "__main__":
     
